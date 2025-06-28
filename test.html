@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio Cá Nhân</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+  <style>
+    /* CSS chung */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    body {
+      line-height: 1.6;
+    }
+
+    header {
+      background: #333;
+      color: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-links li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .hero {
+      background: url('images/background.jpg') center/cover no-repeat;
+      text-align: center;
+      padding: 100px 20px;
+      color: white;
+    }
+
+    .hero h1 span {
+      color: #ffc107;
+    }
+
+    .hero .btn {
+  margin-top: 30px; /* Tăng khoảng cách với dòng trên */
+  padding: 10px 20px;
+  background: #ffc107;
+  color: #333;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .about-content {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .about-content img {
+      width: 250px;
+      border-radius: 10px;
+      flex-shrink: 0;
+    }
+
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .skill-item {
+      background: #f5f5f5;
+      padding: 15px;
+      border-radius: 8px;
+      text-align: center;
+      min-width: 120px;
+    }
+
+    .skill-item i {
+      font-size: 2rem;
+      color: #e91e63;
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .project-item img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .contact form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .contact input, .contact textarea {
+      padding: 10px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .contact button {
+      padding: 10px;
+      background: #e91e63;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    /* Testimonials */
+    .testimonials {
+      text-align: center;
+    }
+
+    .testimonial-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    .testimonial-item {
+      background: #f9f9f9;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 300px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .testimonial-item img {
+      width: 80px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    .testimonial-item p {
+      font-style: italic;
+      margin-bottom: 10px;
+    }
+
+    .testimonial-item h4 {
+      margin: 0;
+      font-size: 1rem;
+      color: #555;
+    }
+    .about-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.about-text .btn-cv {
+  align-self: flex-start; /* Đẩy nút sang bên phải so với ảnh */
+  background-color: #ffc107;
+  color: black;
+  padding: 8px 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+    @media (max-width: 768px) {
+      .about-content {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Anh Quân</div>
+      <ul class="nav-links">
+        <li><a href="#home">Trang chủ</a></li>
+        <li><a href="#about">Giới thiệu</a></li>
+        <li><a href="#skills">Kỹ năng</a></li>
+        <li><a href="#portfolio">Dự án</a></li>
+        <li><a href="#testimonials">Phản hồi</a></li>
+        <li><a href="#contact">Liên hệ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <h1>Xin chào, tôi là <span>Hoàng Anh Quân</span></h1>
+    <p>Web Developer / Designer</p>
+    <!-- <a href="#portfolio" class="btn">Xem Dự Án</a> -->
+  </section>
+
+  <!-- About -->
+  <section id="about" class="about">
+    <h2>Giới Thiệu</h2>
+    <div class="about-content">
+      <img src="images\personal.jpg" alt="Ảnh cá nhân" />
+      <div class="about-text">
+        <p>Mình là học sinh đam mê lập trình web, đang học tại <strong>ESTIH</strong>, có kinh nghiệm làm việc với <strong>HTML, CSS, và JavaScript</strong>.</p>
+        <a href="#" class="btn-cv">Tải CV</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="skills">
+    <h2>Kỹ Năng</h2>
+    <div class="skills-list">
+      <div class="skill-item"><i class="fab fa-html5"></i><p>HTML</p></div>
+      <div class="skill-item"><i class="fab fa-css3-alt"></i><p>CSS</p></div>
+      <div class="skill-item"><i class="fab fa-js-square"></i><p>JavaScript</p></div>
+      <div class="skill-item"><i class="fas fa-code"></i><p>Thiết kế Web</p></div>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section id="portfolio" class="portfolio">
+    <h2>Dự Án</h2>
+    <div class="portfolio-grid">
+      <div class="project-item">
+        <img src="images\du an 1.jpg" alt="Dự án 1" />
+        <p>Website giới thiệu sản phẩm</p>
+      </div>
+      <div class="project-item">
+        <img src="images\du an 2.jpg" alt="Dự án 2" />
+        <p>Landing page khóa học</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="testimonials">
+    <h2>Phản hồi từ người khác</h2>
+    <div class="testimonial-grid">
+      <div class="testimonial-item">
+        <img src="images\nu.jpg" alt="Reviewer 1">
+        <p>"Bạn này rất chăm chỉ và có ý tưởng sáng tạo khi thiết kế website. Bài tập của bạn ấy rất ấn tượng!"</p>
+        <h4>GV. Trần Thị A</h4>
+      </div>
+      <div class="testimonial-item">
+        <img src="images\nam.jpg" alt="Reviewer 2">
+        <p>"Portfolio rất rõ ràng, trình bày hợp lý và đầy đủ thông tin cá nhân và kỹ năng."</p>
+        <h4>Thầy Nguyễn Văn B</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <h2>Liên Hệ</h2>
+    <form id="contact-form">
+      <input type="text" name="name" placeholder="Họ tên" required />
+      <input type="email" name="email" placeholder="Email" required />
+      <textarea name="message" placeholder="Tin nhắn" rows="5" required></textarea>
+      <button type="submit">Gửi</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 - Tên của bạn. All rights reserved.</p>
+  </footer>
+
+  <!-- JS -->
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Cảm ơn bạn đã liên hệ!');
+      this.reset();
+    });
+  </script>
+
+</body>
+</html>
